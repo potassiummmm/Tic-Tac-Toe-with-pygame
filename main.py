@@ -7,7 +7,7 @@ screen_width = 720
 board_height = 300
 board_width = 300
 
-text_font = "stheiti"
+text_font = "SimHei"
 
 board = [[0 for i in range(3)] for j in range(3)]
 white = (255, 255, 255)
@@ -121,7 +121,7 @@ def draw_game_over(screen):
         end_text = "玩家 " + str(winner) + " 胜利!"
     else:
         end_text = "平局"
-    font = pygame.font.SysFont('stheiti', 40)
+    font = pygame.font.SysFont(text_font, 40)
     end_img = font.render(end_text, True, black)
     pygame.draw.rect(screen, white, (300 // 2 - 160, 300 // 2 - 60, 200, 50))
     screen.blit(end_img, (900, 200))
